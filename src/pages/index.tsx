@@ -1,10 +1,11 @@
-import Head from "next/head";
+import React from 'react';
+import Head from 'next/head';
 
 interface Props {
   title: string;
 }
 
-export default function Home({ title = "React Avançado" }: Props) {
+const Home: React.FC<Props> = ({ title = 'React Avançado' }: Props) => {
   return (
     <div className="container">
       <Head>
@@ -56,7 +57,7 @@ export default function Home({ title = "React Avançado" }: Props) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{" "}
+          Powered by{' '}
           <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
         </a>
       </footer>
@@ -208,4 +209,5 @@ export default function Home({ title = "React Avançado" }: Props) {
       `}</style>
     </div>
   );
-}
+};
+export default Home;
